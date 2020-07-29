@@ -8,9 +8,9 @@ This script generates clean "text" files from the cleaned tagged files of the CO
 Example:
 ---------
  
-the file "fic_1936_10080.txt" can be found under the directory COHA/modified/tagged/ in the wlp_1930s_ney.zip file.
+the file "fic_1936_10080.txt" can be found under the directory COHA/clean/tagged/ in the wlp_1930s_ney.zip file.
 The script reads this file, joins all token forms within it using space and creates a file with the same name "fic_1936_10080.txt"
-under the directory COHA/modified/text/
+under the directory COHA/clean/text/
 
 '''
 
@@ -36,8 +36,8 @@ from multiprocessing_logging import install_mp_handler
 ******* ********* *********
 '''
 COHA_path = "/mount/resources/corpora/COHA/"
-tagged_dir = "modified/tagged/"
-text_path = "modified/text/"
+tagged_dir = "clean/tagged/"
+text_path = "clean/text/"
     
 # Get the arguments as global variables
 args = docopt("""Extract contexts from COHA.
@@ -104,7 +104,7 @@ def process_text(zip_file_name):
             text = " ".join(clean_tokens)                                                               
             try:
                 # write result (free text) to a new text file
-                # under modified/text/[decade]/
+                # under clean/text/[decade]/
                 out_file_name = "{0}{1}{2}/{3}".format(COHA_path, text_path,decade,text_file_name) 
                 with codecs.open(out_file_name, 'w+') as out_file:
                     line1 = "{0}\n\n".format(first_line)

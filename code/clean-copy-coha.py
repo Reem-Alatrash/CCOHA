@@ -16,7 +16,7 @@ Example:
  
 the file "fic_1936_10080.txt" can be found under the directory COHA/tagged/ in the wlp_1930s_ney.zip file.
 The script reads the txt file, cleans it and creates a file with the same name "fic_1936_10080.txt"
-under the directory COHA/modified/tagged/1930s
+under the directory COHA/clean/tagged/1930s
 
 '''
 
@@ -50,7 +50,7 @@ from multiprocessing_logging import install_mp_handler
 '''
 COHA_path = "/mount/resources/corpora/COHA/"
 tagged_dir = "tagged/"
-modified_tag_path = "modified/tagged/"
+modified_tag_path = "clean/tagged/"
 malformed_chars = ['.', "'", '--',' ',':', ';', '*', '?','!']
 valid_apostrophs = ["n't","'s","'m","'d","'ve","'ing", "'ll", "etc."]
 
@@ -342,7 +342,7 @@ def write_to_file(header, body, decade, text_file_name):
 	'''Writes the cleanup results to file'''
 	 try:
 		 # write final results (cleaned text) to a new text file
-         # under modified/tagged/[decade]/
+         # under clean/tagged/[decade]/
          out_file_name = "{0}{1}{2}/{3}".format(COHA_path, modified_tag_path,decade,text_file_name) 
          with codecs.open(out_file_name, 'w+') as out_file:
 			 out_file.write(header)

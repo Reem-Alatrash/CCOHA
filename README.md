@@ -1,7 +1,8 @@
 # CCOHA: Clean Corpus of Historical American English.
 ## About
 
-This project contains several Python scripts for creating a clean copy of the compressed tagged files of the COHA corpus. The scripts are:
+This repository contains several Python scripts for creating a clean copy of the compressed tagged files of the COHA corpus. The resulting clean files are written in unicode (UTF-8).
+The scripts in this repository are:
 
 1. **clean-copy-coha.py:** Reads tagged (format: form \t lemma \t pos) files, which are compressed into zip folders, and creates clean copies of them under [COHA path]/modified/tagged/. 
 All the clean files wihtin the same decades are saved under the same folder with that decade's name. For example, the folder [COHA path]/modified/tagged/1880s/ contains all the clean copies of files/documents between 1880-1889.
@@ -11,6 +12,18 @@ All the clean files wihtin the same decades are saved under the same folder with
 ##### How data is cleaned
 For a description of the cleaning process, refer to the publication [CCOHA: Clean Corpus of Historical American English (Reem Alatrash et al. 2020)](https://www.aclweb.org/anthology/2020.lrec-1.859)
 
+## Features
+
+Main:
+- Cleans most malformed tokens and provides new POS tags and lemmas using NLTK libraries.
+- Handles empty and NUL values within tagged files.
+- Unescapes HTML tokens and cleans them (POS tagging and Lemmatization).
+- Rebuilds broken sentences resulting from malformed tokens.
+- Provides sentence tokenization and adds a special END-Of-Sentence token after each sentence. 
+- Uses universal file encoding (UTF-8) instead of the original windows encoding (cp1252).
+
+Technical:
+- Uses multiprocessing to leverage processing speed.  
 
 ## Structure
 The scripts assume the following file structure for the data:
