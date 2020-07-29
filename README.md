@@ -1,4 +1,4 @@
-# CCOHA: Clean Corpus of Historical American English (LREC 2020).
+# CCOHA: Clean Corpus of Historical American English.
 ## About
 
 This project contains several Python scripts for creating a clean copy of the compressed tagged files of the COHA corpus. The scripts are:
@@ -10,7 +10,6 @@ All the clean files wihtin the same decades are saved under the same folder with
 
 ##### How data is cleaned
 For a description of the cleaning process, refer to the publication [CCOHA: Clean Corpus of Historical American English (Reem Alatrash et al. 2020)](https://www.aclweb.org/anthology/2020.lrec-1.859)
-
 
 
 ## Structure
@@ -86,3 +85,6 @@ Example
 ```bash
 python compress_del_folders.py "/mount/resources/corpora/COHA/clean/text/" "T" ""
 ```
+
+##### Note(s)
+Make sure you compress the tagged files before generating the text files
