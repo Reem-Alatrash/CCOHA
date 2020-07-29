@@ -23,7 +23,7 @@ Main:
 - Uses universal file encoding (UTF-8) instead of the original windows encoding (cp1252).
 
 Technical:
-- Uses multiprocessing to leverage processing speed.  
+- Uses multiprocessing for faster processing speeds.  
 
 ## Structure
 The scripts assume the following file structure for the data:
