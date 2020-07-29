@@ -15,6 +15,7 @@ For a description of the cleaning process, refer to the publication [CCOHA: Clea
 ## Structure
 The scripts assume the following file structure for the data:
 
+```
 COHA
 +-- tagged
 |   +-- wlp_1810s_ksw.zip
@@ -31,6 +32,7 @@ COHA
 |   .
 |   +-- cleaned_2000s.zip
 |   +-- text
+```
 
 ## Usage
 Run the python files via line commands or using any python IDE. The following commands illustrate
