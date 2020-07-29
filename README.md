@@ -17,21 +17,24 @@ The scripts assume the following file structure for the data:
 
 ```
 COHA
-+-- tagged
-|   +-- wlp_1810s_ksw.zip
-|   +-- wlp_1820s_hsi.zip
-|   .
-|   .
-|   .
-|   +-- wlp_2000s_iey.zip
-+-- clean
-|   +-- tagged
-|   +-- cleaned_1810s.zip
-|   .
-|   .
-|   .
-|   +-- cleaned_2000s.zip
-|   +-- text
+|
+└─── tagged
+|    | wlp_1810s_ksw.zip
+|    | wlp_1820s_hsi.zip
+|    | .
+|    | .
+|    | .
+|    | wlp_2000s_iey.zip
+|
+└───clean
+|   └─── tagged
+|	|    | cleaned_1810s.zip
+|	|    | .
+|	|    | .
+|	|    | .
+|	|    | cleaned_2000s.zip
+|	|
+|   └─── text
 ```
 
 ## Usage
