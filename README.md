@@ -43,10 +43,11 @@ Run the python files via line commands or using any python IDE. The following co
 
 ##### Cleaning tagged files
 The script can be called using terminal or shell commands with the following arguments:
-<coha_dir> = path to COHA directory.
-<rm_Null> = Remove null tokens? Takes boolean values: T for True or  F for False.  
-<mal_pos> = pos for malformed tokens that are not valid words.
-<nul_sub> = lemma/pos replacement text for columns that are nul (unicode: \x00).
+
+- <coha_dir> = path to COHA directory.
+- <rm_Null> = Remove null tokens? Takes boolean values: T for True or  F for False.  
+- <mal_pos> = pos for malformed tokens that are not valid words.
+- <nul_sub> = lemma/pos replacement text for columns that are nul (unicode: \x00).
 
 ```bash
 python clean-copy-coha.py <coha_dir> <rm_Null> <mal_pos> <nul_sub>
@@ -66,13 +67,15 @@ Example
 python compress_del_folders.py "/mount/resources/corpora/COHA/clean/tagged/" "T" ""
 ```
 which accepts the following arguments:
-<coha_dir> = path to COHA directory
-<del_folder> = Remove folders after compression? Takes boolean values: T for True or  F for False.
-<output_dir> = path to zipped output directory
+
+- <coha_dir> = path to COHA directory
+- <del_folder> = Remove folders after compression? Takes boolean values: T for True or  F for False.
+- <output_dir> = path to zipped output directory
 
 ##### Generating text files
 The script can be called using terminal or shell commands with the following arguments:
-<coha_dir> = path to COHA directory.
+
+- <coha_dir> = path to COHA directory.
 
 ```bash
 python generate_text_files.py <coha_dir>
