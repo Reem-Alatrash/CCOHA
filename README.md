@@ -15,6 +15,7 @@ For a description of the cleaning process, refer to the publication [CCOHA: Clea
 ## Structure
 The scripts assume the following file structure for the data:
 
+
 ```
 COHA
 |
@@ -28,12 +29,12 @@ COHA
 |
 └───clean
 |   └─── tagged
-|	|    | cleaned_1810s.zip
-|	|    | .
-|	|    | .
-|	|    | .
-|	|    | cleaned_2000s.zip
-|	|
+|   |    | cleaned_1810s.zip
+|   |    | .
+|   |    | .
+|   |    | .
+|   |    | cleaned_2000s.zip
+|   |
 |   └─── text
 ```
 
